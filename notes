@@ -1,0 +1,11 @@
+page loads. ryu is standing still
+hover mouse over > shifts to his ready pose
+  stop hovering > back to still
+mouse down > leans forward and throws a 'hadouken gif'
+  hadouken transitions left - right across screen and disappears
+    plays hadouken.mp3
+  ryu remains in that pose until mouse up
+  mouse up > ryu to ready pose
+'x' key down > ryu in 'ryu-cool.gif'
+  'x' key up > back to ready pose
+  plays 'with them' mp3
