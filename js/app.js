@@ -55,9 +55,10 @@ $(document).ready(function(){
     // keypress('#basshead');
     if(event.which == 88){
       playSound('#basshead');
+      $('.ryu-cool').show();
       $('.ryu-still').hide();
       $('.ryu-ready').hide();
-      $('.ryu-cool').show();
+      $('.ryu-hadouken').hide();
     }
   })
     .keyup(function(event){
@@ -66,6 +67,8 @@ $(document).ready(function(){
         $('#basshead')[0].load();
         $('.ryu-still').show();
         $('.ryu-cool').hide();
+        $('.ryu-ready').hide();
+        $('.ryu-hadouken').hide();
       }
       // playSound('#basshead');
   });
