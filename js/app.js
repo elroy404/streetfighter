@@ -17,18 +17,24 @@ $(document).ready(function(){
   // }
 
   $('.ryu').mouseenter(function(){
-    $('.ryu-still').hide();
     $('.ryu-ready').show();
+    $('.ryu-still').hide();
+    $('.ryu-cool').hide();
+    $('.ryu-hadouken').hide();
   })
     .mouseleave(function(){
       $('.ryu-still').show();
       $('.ryu-ready').hide();
+      $('.ryu-cool').hide();
+      $('.ryu-hadouken').hide();
   })
     .mousedown(function(){
       playSound('#hadouken-sound');
+      $('.ryu-cool').hide();
       $('.ryu-still').hide();
       $('.ryu-ready').hide();
       $('.ryu-hadouken').show();
+      // hadouken fire ball
       $('.hadouken').show().animate({
         // backgroundPositionX: "90px"
         'left': '1020px'
@@ -42,7 +48,7 @@ $(document).ready(function(){
     .mouseup(function(){
       $('.ryu-ready').show();
       $('.ryu-hadouken').hide();
-      // $('.hadouken').hide();
+      $('.ryu-still').hide();
   });
 
   $(document).keydown(function(event){
@@ -50,6 +56,7 @@ $(document).ready(function(){
     if(event.which == 88){
       playSound('#basshead');
       $('.ryu-still').hide();
+      $('.ryu-ready').hide();
       $('.ryu-cool').show();
     }
   })
